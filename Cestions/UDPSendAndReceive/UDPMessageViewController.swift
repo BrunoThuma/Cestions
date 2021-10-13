@@ -10,15 +10,15 @@ import Network
 
 class UDPMessageViewController: UIViewController {
 
-    private lazy var udpButton: RoundedButton = RoundedButton.createBlueButton(title: "Send message")
     private lazy var labelStatus: UILabel = .init()
     private lazy var labelMessage: UILabel = .init()
     private lazy var addressTextField: UITextField = .init()
     private lazy var messageTextField: UITextField = .init()
+    private lazy var udpButton: RoundedButton = RoundedButton.createBlueButton(title: "Send message")
     
     var connection: NWConnection?
-    var hostUDP: NWEndpoint.Host = "192.168.15.157"
-    var portUDP: NWEndpoint.Port = 20001
+    var hostUDP: NWEndpoint.Host?// = "192.168.15.157"
+    var portUDP: NWEndpoint.Port?// = 20001
     
     let gradient = CAGradientLayer()
 
@@ -28,7 +28,7 @@ class UDPMessageViewController: UIViewController {
         view.backgroundColor = .systemBackground
         
         gradient.frame = self.view.bounds
-        gradient.colors = [UIColor.systemGray5.cgColor, UIColor.systemGray6.cgColor]
+        gradient.colors = [UIColor.systemGray4.cgColor, UIColor.systemGray6.cgColor]
         
         view.layer.insertSublayer(gradient, at: 0)
 
@@ -54,24 +54,31 @@ class UDPMessageViewController: UIViewController {
     }
     
     private func setupStatusLabel() {
-        
         labelStatus.translatesAutoresizingMaskIntoConstraints = false
         labelStatus.textColor = .systemGray6
     }
     
     private func setupMessageLabel() {
-        
         labelMessage.translatesAutoresizingMaskIntoConstraints = false
         labelMessage.textColor = .systemGray6
     }
     
     private func setupAddressField() {
-        
         addressTextField.translatesAutoresizingMaskIntoConstraints = false
     }
     
     //MARK:- UDP
     @objc func udpRoutine() {
+        
+        guard let hostUDP = hostUDP, let portUDP = portUDP else {
+            addressTextField.layer.borderWidth = 1
+            addressTextField.layer.borderColor = UIColor.systemRed.cgColor
+            messageTextField.layer.borderWidth = 1
+            messageTextField.layer.borderColor = UIColor.systemRed.cgColor
+            
+            return
+        }
+
         connectToUDP(hostUDP, portUDP)
     }
     
