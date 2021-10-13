@@ -12,7 +12,7 @@ import Darwin
 // Addresses
 
 let INADDR_ANY = in_addr(s_addr: 0)
-let INADDR_BROADCAST = in_addr(s_addr: 0xffffffff)
+let INADDR_BROADCAST = in_addr(s_addr: 0xc0a80fff)
 
 
 /// An object representing the UDP broadcast connection. Uses a dispatch source to handle the incoming traffic on the UDP socket.

@@ -33,11 +33,11 @@ class ViewController: UIViewController {
         view.layer.insertSublayer(gradient, at: 0)
         
         udpBroadcast.addTarget(self,
-                               action: #selector(udpMessageTapped),
+                               action: #selector(udpBroadcastTapped),
                                for: .touchUpInside)
         
         udpMessage.addTarget(self,
-                             action: #selector(udpBroadcastTapped),
+                             action: #selector(udpMessageTapped),
                              for: .touchUpInside)
     }
 
@@ -70,7 +70,7 @@ class ViewController: UIViewController {
     @objc private func udpBroadcastTapped() {
         navigationController?.setNavigationBarHidden(false, animated: true)
         
-        let scanVC = UDPMessageViewController()
+        let scanVC = UDPBroadcastViewController()
         navigationController?.pushViewController(scanVC, animated: true)
     }
     
