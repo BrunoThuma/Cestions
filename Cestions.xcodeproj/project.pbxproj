@@ -15,6 +15,8 @@
 		5EF2F9DD27163EC100C28792 /* UDPBroadcastConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2F9DC27163EC100C28792 /* UDPBroadcastConnection.swift */; };
 		5EF2F9DF27163EF300C28792 /* UDPBroadcastConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2F9DE27163EF300C28792 /* UDPBroadcastConnectionError.swift */; };
 		5EF2F9E12716437800C28792 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2F9E02716437800C28792 /* RoundedButton.swift */; };
+		5EF2F9E327166B9300C28792 /* FormsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2F9E227166B9300C28792 /* FormsTextField.swift */; };
+		5EF2F9E527169D2900C28792 /* UDPBroadcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF2F9E427169D2900C28792 /* UDPBroadcastViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		5EF2F9DC27163EC100C28792 /* UDPBroadcastConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPBroadcastConnection.swift; sourceTree = "<group>"; };
 		5EF2F9DE27163EF300C28792 /* UDPBroadcastConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPBroadcastConnectionError.swift; sourceTree = "<group>"; };
 		5EF2F9E02716437800C28792 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		5EF2F9E227166B9300C28792 /* FormsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsTextField.swift; sourceTree = "<group>"; };
+		5EF2F9E427169D2900C28792 /* UDPBroadcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPBroadcastViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 				5E1B4430270F264600B7C7C3 /* Assets.xcassets */,
 				5E1B4435270F264600B7C7C3 /* Info.plist */,
 				5EF2F9E02716437800C28792 /* RoundedButton.swift */,
+				5EF2F9E227166B9300C28792 /* FormsTextField.swift */,
 			);
 			path = Cestions;
 			sourceTree = "<group>";
@@ -85,6 +90,7 @@
 			children = (
 				5EF2F9DC27163EC100C28792 /* UDPBroadcastConnection.swift */,
 				5EF2F9DE27163EF300C28792 /* UDPBroadcastConnectionError.swift */,
+				5EF2F9E427169D2900C28792 /* UDPBroadcastViewController.swift */,
 			);
 			path = UDPBroadcast;
 			sourceTree = "<group>";
@@ -161,10 +167,12 @@
 				5E1B442C270F264500B7C7C3 /* ViewController.swift in Sources */,
 				5E1B4428270F264500B7C7C3 /* AppDelegate.swift in Sources */,
 				5EF2F9DD27163EC100C28792 /* UDPBroadcastConnection.swift in Sources */,
+				5EF2F9E527169D2900C28792 /* UDPBroadcastViewController.swift in Sources */,
 				5EF2F9DA27163E7A00C28792 /* UDPMessageViewController.swift in Sources */,
 				5EF2F9E12716437800C28792 /* RoundedButton.swift in Sources */,
 				5EF2F9DF27163EF300C28792 /* UDPBroadcastConnectionError.swift in Sources */,
 				5E1B442A270F264500B7C7C3 /* SceneDelegate.swift in Sources */,
+				5EF2F9E327166B9300C28792 /* FormsTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
